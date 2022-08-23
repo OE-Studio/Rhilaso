@@ -108,7 +108,7 @@ const Crew = () =>{
 
             {/* little b and p */}
             {/* <div className='mt-20'>
-                <h3 className="w-full bg-[#2B8187] text-center py-4 text-white font-bonvivant text-4xl">Little Brides & Page boys</h3>
+                <h3 className="w-full bg-[#2B8187] text-center py-4 text-white font-bonvivant text-4xl">Little Brides &amp; Page boys</h3>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-2 mt-12'>
                     {men.map(a=>{
                         return (

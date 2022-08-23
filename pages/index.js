@@ -37,7 +37,7 @@ const actions = [
   {
     image:action3,
     text:"Gift the Couple",
-    link:"/"
+    link:"#gifts"
   },
 ]
 
@@ -56,7 +56,7 @@ export default function Home() {
       {/* Date */}
       <div className=' py-28 bg-[#01575D] flex justify-center'>
         <div className='inline-block text-white'>
-          <div className='flex w-auto text-6xl md:text-[100px] xl:text-[150px] divide-x divide-dashed font-bonvivant'>
+          <div className='flex w-auto text-4xl md:text-[100px] xl:text-[150px] md:leading-[100px] divide-x divide-dashed font-bonvivant'>
             <div className='pr-6 lg:pr-12'>01</div>
             <div className='px-6 lg:px-12'>Oct</div>
             <div className='pl-6 lg:pl-12'>22</div>
@@ -87,7 +87,7 @@ export default function Home() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-2 mt-20'>
           {actions.map(a=>{
             return (
-              <Link href={a.link}>
+              <Link key={a.link} href={a.link}>
                 <div onMouseOver={hoverAction} onMouseOut={removeHoverAction} key={a.text} className="cursor-pointer">
                   <Img src={a.image} alt="Sarah and Rhilaso"/>
                   <div className='py-6 text-center text-white bg-[#2B8187] font-bonvivant'>{a.text}</div>

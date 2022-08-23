@@ -3,6 +3,7 @@ import Nav from "./Nav"
 import Logo from '../assets/Logo.svg'
 import HeroImg from '../assets/hero.png'
 import Img from "./Image"
+import Head from "next/head"
 // import Footer from "./footer"
 
 const colours = [
@@ -27,15 +28,19 @@ const colours = [
 const Layout = ({children}) =>{
     return (
         <div>
+            <Head>
+                <title>Rhilaso and Sarah</title>
+                <meta name="description" content="Details of the wedding of Rhilso and Sarah"/>
+            </Head>
             <Nav/>
             <div>
                 <div className="relative flex items-center justify-center">
-                    <Image src={Logo} width={300} height={300} className="" alt="Rhilaso and Sarah logo" priority/>
+                    <Image src={Logo} width={300} height={300} className="" alt="Rhilaso and Sarah logo"/>
                 </div>
 
                 <header className="text-center mt-5 space-y-2">
                     <h4 className="text-4xl text-[#001516] font-bonvivant">A blessed union between</h4>
-                    <h1 className="text-5xl lg:text-8xl text-[#01686F] font-bonvivant">Sarah & Rhilaso</h1>
+                    <h1 className="text-5xl lg:text-8xl text-[#01686F] font-bonvivant">Sarah &amp; Rhilaso</h1>
                 </header>
 
                 <div className="w-full h-auto container px-4 lg:md:px-8 xl:px-10  mx-auto mt-16">
@@ -87,7 +92,7 @@ const Layout = ({children}) =>{
                 <footer className="py-24 text-center bg-[#013438] space-y-10" id="rsvp">
                     <div>
                         <h4 className="font-bonvivant text-3xl text-[#ECC16A]">RSVP</h4>
-                        <div className="flex inline-flex gap-2 text-white mt-6 xl:text-2xl">
+                        <div className="flex inline-flex gap-2 text-white mt-6 text-xs sm:text-base xl:text-2xl">
                             <div className="px-2 md:px-6 py-2 bg-[#01454A]">+234 806 310 8075</div>
                             <div className="px-2 md:px-6 py-2 bg-[#01454A]">+234 805 543 1685</div>
                         </div>
@@ -95,23 +100,23 @@ const Layout = ({children}) =>{
 
                     <div>
                         <h4 className="font-bonvivant text-3xl text-[#ECC16A]">Wedding Address</h4>
-                        <div className="flex inline-flex gap-2 text-white mt-6 text-2xl">
+                        <div className="flex inline-flex gap-2 text-white mt-6 xl:text-2xl">
                             <div className="px-6 py-2 bg-[#01454A]">ECWA Goodnews church Diko,Niger state</div>
                         </div>
                     </div>
 
-                    <div className="w-auto flex text-white gap-6 mx-auto inline-flex px-4 md:px-0">
+                    <div className="w-auto flex text-white gap-2 md:gap-6 mx-auto inline-flex px-4 md:px-0">
                         {colours.map(c=>{
                             return (
                                 <div key={c.color} className="w-auto lg:w-24">
-                                    <div className={`${c.color} w-16 h-16 lg:w-24 lg:h-24 rounded-full mx-auto`}></div>
-                                    <p>{c.name}</p>
+                                    <div className={`${c.color} w-12 h-12 lg:w-24 lg:h-24 rounded-full mx-auto`}></div>
+                                    <p className="text-xs md:text-base">{c.name}</p>
                                 </div>
                             )
                         })}
                     </div>
 
-                    <div className="h-20 flex items-center justify-center bg-[#002325] text-white tracking-[5px] lg:tracking-[20px] text-2xl uppercase">
+                    <div className="h-20 flex items-center justify-center bg-[#002325] text-white tracking-[2px] lg:tracking-[20px] text-2xl uppercase">
                         #TRhilSAffair"22
                     </div>
                 </footer>

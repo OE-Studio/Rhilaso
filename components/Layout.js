@@ -52,7 +52,7 @@ const Layout = ({children}) =>{
                 {children}
             </main>
 
-            <section className="">
+            <section>
                 <section className="container mx-auto px-4 md:px-8 lg:px-10 py-20" id="gifts">
                     <div className="py-8 xl:py-16 relative text-center border-b-2 border-[#569A9F]">
                         <h2 className="font-bonvivant text-5xl xl:text-8xl">Gift</h2>
@@ -64,8 +64,8 @@ const Layout = ({children}) =>{
                     <div className="grid grid-cols-3 mt-12 xl:mt-24 gap-4">
                         <div className="col-span-3 md:col-span-1 p-4 xl:p-8 border border-[#569A9F]">
                             <div className=" flex flex-col items-center justify-center">
-                                <Image src={Logo} alt="Sarah and Rhilaso's logo" className=""/>
-                                <h2 className="font-bonvivant text-4xl md:text-3xl lg:text-4xl xl:text-6xl text-center">TRhilsAffair’22</h2>
+                                <Image src={Logo} alt="Sarah and Rhilaso's logo"/>
+                                <h2 className="font-bonvivant text-4xl md:text-3xl lg:text-4xl xl:text-6xl text-center">TRhilsAffair&acute;22</h2>
                             </div>
                         </div>
                         <section className="col-span-3 md:col-span-2 bg-[#01575D] p-10 md:p-0 md:pl-10 text-white md:h-full md:flex flex-col items-start justify-center text-2xl">
@@ -117,7 +117,7 @@ const Layout = ({children}) =>{
                     </div>
 
                     <div className="h-20 flex items-center justify-center bg-[#002325] text-white tracking-[2px] lg:tracking-[20px] text-2xl uppercase">
-                        #TRhilSAffair"22
+                        #TRhilSAffair&acute;22
                     </div>
                 </footer>
             </section>

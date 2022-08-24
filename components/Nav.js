@@ -26,6 +26,7 @@ const Nav = () => {
             navList.classList.add('-top-full')
             navList.classList.remove('top-20')
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showNav])
 
     const LinkComponent = ({href, name}) =>{

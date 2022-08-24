@@ -102,7 +102,7 @@ export default function Home() {
       <section className='grid grid-cols-10 gap-5 container mx-auto px-4 md:px-4 xl:px-10 ' id="gallery">
         <div className='col-span-10 md:hidden flex flex-col items-center justify-center'>
           <Image src={galleryLogo} alt="Sarah anad Rhilaso logo"/>
-          <h4 className='font-bonvivant text-4xl md:text-3xl xl:text-6xl text-center'>TRhilsAffair’22</h4>
+          <h4 className='font-bonvivant text-4xl md:text-3xl xl:text-6xl text-center'>TRhilsAffair&acute;22</h4>
         </div>
         {/* Left */}
         <div className='col-span-10 md:col-span-3 flex flex-col items-center justify-start gap-5 md:mt-40 xl:mt-80'>
@@ -116,7 +116,7 @@ export default function Home() {
         <div className='col-span-10 md:col-span-4 flex flex-col items-center justify-start gap-5'>
           <div className='hidden md:flex flex-col items-center justify-center'>
             <Image src={galleryLogo} alt="Sarah anad Rhilaso logo" className=''/>
-            <h4 className='font-bonvivant text-4xl md:text-3xl xl:text-6xl text-center'>TRhilsAffair’22</h4>
+            <h4 className='font-bonvivant text-4xl md:text-3xl xl:text-6xl text-center'>TRhilsAffair&acute;22</h4>
           </div>
           <div className='inline-block md:mt-20 xl:mt-40'><Img src={gallery2} alt="Sarah"/></div>
           <div className='inline-block'><Img src={gallery5} alt="Rhilaso"/></div>

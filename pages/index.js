@@ -75,7 +75,7 @@ export default function Home() {
             <div className='flex items-center justify-center md:justify-start'>
               <h1 className='text-[#E8B145] border-b-4 border-[#E8B145] text-4xl xl:text-8xl font-bonvivant inline-block text-center'>Our Story</h1>
             </div>
-            <p className='mt-6 xl:mt-12 leading-10'>From a casual exchange of pleasantries at a campus fellowship in 2012, to becoming friends and then lovers in 2014 amid so much uncertainty and caution. Ours has been an 8-year journey of learning selflessness and standing through thick and thin. Now we get the opportunity to do forever together, a journey we're confident in the grace of God to carry us through</p>
+            <p className='mt-6 xl:mt-12 leading-10'>From a casual exchange of pleasantries at a campus fellowship in 2012, to becoming friends and then lovers in 2014 amid so much uncertainty and caution. Ours has been an 8-year journey of learning selflessness and standing through thick and thin. Now we get the opportunity to do forever together, a journey we&acute;re confident in the grace of God to carry us through</p>
           </div>
         </div>
       </section>

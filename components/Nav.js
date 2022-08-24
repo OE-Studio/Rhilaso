@@ -44,10 +44,10 @@ const Nav = () => {
   return (
     <div className='w-full flex items-center justify-between md:justify-center relative h-20 md:h-auto px-4 md:px-0 overflow-hidden sticky top-0 bg-white md:bg-[#FCF9F2] z-50'>
         <ul className={`navList w-full md:w-auto h-auto fixed left-0 -top-full md:top-0 bg-white md:bg-[#FCF9F2] md:relative md:inline-flex flex flex-col md:flex-row items-center md:space-x-12 mx-auto text-[#01575D] uppercase z-30 space-y-12 md:space-y-0 py-16 md:py-0 ${styles.navList}`}>
-            <li className='hover:font-semibold'>
+            <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
                 <LinkComponent href="" name="home"/>
             </li>
-            <li className='hover:font-semibold'>
+            <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
                 <LinkComponent href="#ourStory" name="our story"/>
             </li>
             {/* <li className='hover:font-semibold'>
@@ -56,10 +56,10 @@ const Nav = () => {
             <li className='hidden md:block'>
                 <Image src={Logo} alt="sarah and Rhilaro logo"/>
             </li>
-            <li className='hover:font-semibold'>
+            <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
                 <LinkComponent href="#rsvp" name="rsvp"/>
             </li>
-            <li className='hover:font-semibold'>
+            <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
                 <LinkComponent href="#gifts" name="gifts"/>
             </li>
         </ul>

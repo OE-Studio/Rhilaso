@@ -1,3 +1,4 @@
+import React, {useEffect} from 'react'
 import story from '../assets/story.png'
 import Img from '../components/Image'
 import Image from 'next/image'
@@ -18,8 +19,10 @@ import gallery10 from '../assets/gallery10.png'
 import gallery11 from '../assets/gallery11.png'
 import gallery12 from '../assets/gallery12.png'
 import galleryLogo from '../assets/galleryLogo.svg'
-
 import Link from 'next/link'
+
+import AOS from 'aos';
+import "aos/dist/aos.css"
 
 
 
@@ -51,6 +54,13 @@ export default function Home() {
     e.currentTarget.children[1].classList.remove('bg-[#013438]')
     e.currentTarget.children[1].classList.add('bg-[#2B8187]')
   }
+
+  useEffect(()=>{
+    AOS.init({
+      duration : 1000
+    });
+  },[])
+
   return (
     <div className="relative">
       {/* Date */}
@@ -106,30 +116,30 @@ export default function Home() {
         </div>
         {/* Left */}
         <div className='col-span-10 md:col-span-3 flex flex-col items-center justify-start gap-5 md:mt-40 xl:mt-80'>
-            <div className='inline-block'><Img src={gallery1} alt="Sarah"/></div>
-            <div className='inline-block'><Img src={gallery4} alt="Rhilaso"/></div>
-            <div className='inline-block'><Img src={gallery7} alt="Sarah"/></div>
-            <div className='inline-block'><Img src={gallery10} alt="Rhilaso"/></div>
+            <div className='inline-block' data-aos="fade-up"><Img src={gallery1} alt="Sarah"/></div>
+            <div className='inline-block' data-aos="fade-up"><Img src={gallery4} alt="Rhilaso"/></div>
+            <div className='inline-block' data-aos="fade-up"><Img src={gallery7} alt="Sarah"/></div>
+            <div className='inline-block' data-aos="fade-up"><Img src={gallery10} alt="Rhilaso"/></div>
         </div>
 
         {/* Center */}
         <div className='col-span-10 md:col-span-4 flex flex-col items-center justify-start gap-5'>
-          <div className='hidden md:flex flex-col items-center justify-center'>
+          <div className='hidden md:flex flex-col items-center justify-center' data-aos="fade-up">
             <Image src={galleryLogo} alt="Sarah anad Rhilaso logo" className=''/>
             <h4 className='font-bonvivant text-4xl md:text-3xl xl:text-6xl text-center'>TRhilsAffair&acute;22</h4>
           </div>
           <div className='inline-block md:mt-20 xl:mt-40'><Img src={gallery2} alt="Sarah"/></div>
-          <div className='inline-block'><Img src={gallery5} alt="Rhilaso"/></div>
-          <div className='inline-block'><Img src={gallery8} alt="Sarah"/></div>
-          <div className='inline-block'><Img src={gallery11} alt="Rhilaso"/></div>
+          <div className='inline-block' data-aos="fade-up"><Img src={gallery5} alt="Rhilaso"/></div>
+          <div className='inline-block' data-aos="fade-up"><Img src={gallery8} alt="Sarah"/></div>
+          <div className='inline-block' data-aos="fade-up"><Img src={gallery11} alt="Rhilaso"/></div>
         </div>
 
         {/* right */}
         <div className='col-span-10 md:col-span-3 flex flex-col items-center justify-start gap-5 md:mt-40 xl:mt-80'>
-          <div className='inline-block'><Img src={gallery3} alt="Sarah"/></div>
-          <div className='inline-block'><Img src={gallery6} alt="Rhilaso"/></div>
-          <div className='inline-block'><Img src={gallery9} alt="Sarah"/></div>
-          <div className='inline-block'><Img src={gallery12} alt="Rhilaso"/></div>
+          <div className='inline-block' data-aos="fade-up"><Img src={gallery3} alt="Sarah"/></div>
+          <div className='inline-block' data-aos="fade-up"><Img src={gallery6} alt="Rhilaso"/></div>
+          <div className='inline-block' data-aos="fade-up"><Img src={gallery9} alt="Sarah"/></div>
+          <div className='inline-block' data-aos="fade-up"><Img src={gallery12} alt="Rhilaso"/></div>
         </div>
       </section>
     </div>

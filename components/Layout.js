@@ -31,6 +31,8 @@ const Layout = ({children}) =>{
             <Head>
                 <title>Rhilaso and Sarah</title>
                 <meta name="description" content="Details of the wedding of Rhilso and Sarah"/>
+                <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+                <script src="bower_components/aos/dist/aos.js"></script> 
             </Head>
             <Nav/>
             <div>
@@ -65,7 +67,7 @@ const Layout = ({children}) =>{
                         <div className="col-span-3 md:col-span-1 p-4 xl:p-8 border border-[#569A9F]">
                             <div className=" flex flex-col items-center justify-center">
                                 <Image src={Logo} alt="Sarah and Rhilaso's logo"/>
-                                <h2 className="font-bonvivant text-4xl md:text-3xl lg:text-4xl xl:text-6xl text-center">TRhilsAffair&acute;22</h2>
+                                <h2 className="font-bonvivant text-4xl md:text-3xl lg:text-3xl xl:text-5xl text-center">TRhilsAffair&acute;22</h2>
                             </div>
                         </div>
                         <section className="col-span-3 md:col-span-2 bg-[#01575D] p-10 md:p-0 md:pl-10 text-white md:h-full md:flex flex-col items-start justify-center text-2xl">

@@ -23,8 +23,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-            <script src="bower_components/aos/dist/aos.js"></script> 
             <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"></link>
         </Head>
         <body>

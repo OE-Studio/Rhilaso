@@ -1,19 +1,20 @@
 import React, {useEffect, useState} from "react"
 import styles from '../styles/Popup.module.css'
 import animation from '../styles/Animations.module.css'
+import Image from "next/image"
 
-import gallery1 from '../public/gallery1.png'
-import gallery2 from '../public/gallery2.png'
-import gallery3 from '../public/gallery3.png'
-import gallery4 from '../public/gallery4.png'
-import gallery5 from '../public/gallery5.png'
-import gallery6 from '../public/gallery6.png'
-import gallery7 from '../public/gallery7.png'
-import gallery8 from '../public/gallery8.png'
-import gallery9 from '../public/gallery9.png'
-import gallery10 from '../public/gallery10.png'
-import gallery11 from '../public/gallery11.png'
-import gallery12 from '../public/gallery12.png'
+import gallery1 from '../public/gallery1.jpg'
+import gallery2 from '../public/gallery2.jpg'
+import gallery3 from '../public/gallery3.jpg'
+import gallery4 from '../public/gallery4.jpg'
+import gallery5 from '../public/gallery5.jpg'
+import gallery6 from '../public/gallery6.jpg'
+import gallery7 from '../public/gallery7.jpg'
+import gallery8 from '../public/gallery8.jpg'
+import gallery9 from '../public/gallery9.jpg'
+import gallery10 from '../public/gallery10.jpg'
+import gallery11 from '../public/gallery11.jpg'
+import gallery12 from '../public/gallery12.jpg'
 
 const images = [gallery1,gallery2,gallery3,gallery4,gallery5,gallery6,gallery7,gallery8,gallery9,gallery10,gallery11,gallery12]
 
@@ -41,8 +42,14 @@ const Popup = ({setShowGallery}) =>{
             setCurrentIndex(prev=>prev - 1)
         }
     }
+
+    const closePopup = (e) =>{
+        if(Array.from(e.target.classList).indexOf('popupCont') > -1) {
+            setShowGallery(false)
+        }
+    }
     return (
-        <div className={`fixed h-screen w-full top-0 left-0 z-50 flex items-center justify-center ${styles.popup}`}>
+        <div onClick={closePopup} className={`popupCont fixed h-screen w-full top-0 left-0 z-50 flex items-center justify-center ${styles.popup}`}>
             <div className={`w-11/12 md:w-10/12 lg:w-1/2 xl:w-1/3 h-5/6 mx-auto my-auto border-4 border-[#FFFFFF] rounded-lg relative ${animation.navList}`}>
                 {/* <Image src={images[currentIndex]}/> */}
                 <div className="w-full h-full image-container inline-block" style={{

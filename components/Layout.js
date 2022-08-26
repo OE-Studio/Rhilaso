@@ -1,8 +1,8 @@
 import React, {useState} from "react"
 import Image from "next/image"
 import Nav from "./Nav"
-import Logo from '../assets/Logo.svg'
-import HeroImg from '../assets/hero.png'
+import Logo from '../assets/Logo.png'
+import HeroImg from '../assets/hero.jpg'
 import Img from "./Image"
 import Head from "next/head"
 // import Footer from "./footer"
@@ -63,8 +63,8 @@ const Layout = ({children}) =>{
             </main>
 
             <section>
-                <section className="container mx-auto px-4 md:px-8 lg:px-10 py-20" id="gifts">
-                    <div className="py-8 xl:py-16 relative text-center border-b-2 border-[#569A9F]">
+                <section className="container mx-auto px-4 md:px-8 lg:px-10 py-10" id="gifts">
+                    <div className="py-8 xl:py-10 relative text-center border-b-2 border-[#569A9F]">
                         <h2 className="font-bonvivant text-5xl xl:text-8xl">Gift</h2>
                         <h3 className="font-bonvivant text-2xl xl:text-3xl">The Couples</h3>
 
@@ -78,7 +78,7 @@ const Layout = ({children}) =>{
                                 <h2 className="font-bonvivant text-4xl md:text-3xl lg:text-3xl xl:text-5xl text-center">TRhilsAffair&acute;22</h2>
                             </div>
                         </div>
-                        <section className="col-span-3 md:col-span-2 bg-[#01575D] p-10 md:p-0 md:pl-10 text-white md:h-full md:flex flex-col items-start justify-center text-2xl">
+                        <section className="col-span-3 md:col-span-2 bg-[#01575D] p-10 md:p-0 md:pl-10 lg:pl-16 xl:pl-24 text-white md:h-full md:flex flex-col items-start justify-center text-2xl">
                             <p className="text-[#ECC16A] text-xl">You can send in gifts in form of cash as well:</p>
                             <section className="w-auto mt-6 md:mt-3 lg:mt-6 text-base">
                                 <div className="inline-block border-t border-[#ECC16A] py-6 md:py-3 lg:py-6">

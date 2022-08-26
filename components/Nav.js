@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import styles from '../styles/Animations.module.css'
 import { useRouter } from 'next/router'
-import Logo from '../assets/navLogo.svg'
+import Logo from '../assets/Logo.png'
 import Image from 'next/image'
 
 
@@ -53,7 +53,7 @@ const Nav = () => {
             {/* <li className='hover:font-semibold'>
                 <LinkComponent href="#gallery" name="gallery"/>
             </li> */}
-            <li className='hidden md:block'>
+            <li className='hidden md:block w-24 h-auto'>
                 <Image src={Logo} alt="sarah and Rhilaro logo"/>
             </li>
             <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>

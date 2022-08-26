@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import story from '../assets/story.png'
+import story from '../assets/story.jpg'
 import Img from '../components/Image'
-import Image from 'next/image'
-import action1 from '../assets/action1.png'
-import action2 from '../assets/action2.png'
-import action3 from '../assets/action3.png'
+import action1 from '../assets/action1.jpg'
+import action2 from '../assets/action2.jpg'
+import action3 from '../assets/action3.jpg'
 
 
 import Link from 'next/link'

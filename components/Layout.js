@@ -1,3 +1,4 @@
+import React, {useState} from "react"
 import Image from "next/image"
 import Nav from "./Nav"
 import Logo from '../assets/Logo.svg'
@@ -26,13 +27,20 @@ const colours = [
 ]
 
 const Layout = ({children}) =>{
+    const [success, setSuccess] = useState(false)
+    const copyToClipboard = (e) =>{
+        navigator.clipboard.writeText(e.target.textContent)
+        setSuccess(true)
+        setTimeout(()=>{
+            setSuccess(false)
+        }, 5000)
+    }
+
     return (
         <div>
             <Head>
                 <title>Rhilaso and Sarah</title>
                 <meta name="description" content="Details of the wedding of Rhilso and Sarah"/>
-                <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-                <script src="bower_components/aos/dist/aos.js"></script> 
             </Head>
             <Nav/>
             <div>
@@ -41,7 +49,7 @@ const Layout = ({children}) =>{
                 </div>
 
                 <header className="text-center mt-5 space-y-2">
-                    <h4 className="text-4xl text-[#001516] font-bonvivant">A blessed union between</h4>
+                    <h4 className="text-2xl xl:text-4xl text-[#001516] font-bonvivant">A blessed union between</h4>
                     <h1 className="text-5xl lg:text-8xl text-[#01686F] font-bonvivant">Sarah &amp; Rhilaso</h1>
                 </header>
 
@@ -75,7 +83,7 @@ const Layout = ({children}) =>{
                             <section className="w-auto mt-6 md:mt-3 lg:mt-6 text-base">
                                 <div className="inline-block border-t border-[#ECC16A] py-6 md:py-3 lg:py-6">
                                     <h4 className="font-semibold">Account details</h4>
-                                    <p>2017250890</p>
+                                    <p onClick={copyToClipboard} className="cursor-pointer hover:text-[#ECC16A]">2017250890</p>
                                     <p>Sarah ishaku</p>
                                     <p>Kuda Bank</p>
                                 </div>
@@ -83,7 +91,7 @@ const Layout = ({children}) =>{
 
                             <section className="w-auto text-base">
                                 <div className="inline-block border-t border-[#ECC16A] py-6 md:py-3 lg:py-6">
-                                    <p>2004911294 </p>
+                                    <p onClick={copyToClipboard} className="cursor-pointer hover:text-[#ECC16A]">2004911294 </p>
                                     <p>Silas Rhilaso Dokong</p>
                                     <p>Kuda Bank</p>
                                 </div>
@@ -95,8 +103,8 @@ const Layout = ({children}) =>{
                     <div>
                         <h4 className="font-bonvivant text-3xl text-[#ECC16A]">RSVP</h4>
                         <div className="flex inline-flex gap-2 text-white mt-6 text-xs sm:text-base xl:text-2xl">
-                            <div className="px-2 md:px-6 py-2 bg-[#01454A]">+234 806 310 8075</div>
-                            <div className="px-2 md:px-6 py-2 bg-[#01454A]">+234 805 543 1685</div>
+                            <a className="px-2 md:px-6 py-2 bg-[#01454A]" href="tel:+234 806 310 8075">+234 806 310 8075</a>
+                            <a className="px-2 md:px-6 py-2 bg-[#01454A]" href="tel:+234 805 543 1685">+234 805 543 1685</a>
                         </div>
                     </div>
 
@@ -123,6 +131,11 @@ const Layout = ({children}) =>{
                     </div>
                 </footer>
             </section>
+
+            {/* Account number copy */}
+            {success && <div className="fixed bottom-4 right-4 bg-green-50 text-green-600 py-2 px-2 border-l-4 border-green-600">
+                Account number was copied successfully
+            </div>}
         </div>
     )
 }

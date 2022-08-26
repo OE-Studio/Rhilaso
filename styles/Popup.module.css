@@ -1,0 +1,9 @@
+.popup {
+    background-color: rgba(196, 194, 194, 0.7);
+    backdrop-filter: blur(1px)
+}
+
+.arrowBg {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+}

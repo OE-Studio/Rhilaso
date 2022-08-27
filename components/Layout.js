@@ -48,7 +48,7 @@ const Layout = ({children}) =>{
                 {children}
             </main>
 
-            <section>
+            <section className="mt-10">
                 <section className="container mx-auto px-4 md:px-8 lg:px-10 pb-10" id="gifts">
                     <div className="pb-8 relative text-center border-b-2 border-[#569A9F]">
                         <h2 className="font-bonvivant text-5xl xl:text-8xl">Gift</h2>

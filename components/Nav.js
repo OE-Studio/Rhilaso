@@ -9,6 +9,7 @@ import Image from 'next/image'
 
 const Nav = () => {
     const [showNav, setShowNav] = useState(false)
+    const [disable, setDisable] = useState(false)
     let navList
     if(typeof(window) !== "undefined") {
         navList = document.querySelector('.navList')
@@ -29,38 +30,54 @@ const Nav = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showNav])
 
-    const LinkComponent = ({href, name}) =>{
-        const router = useRouter().asPath.substring(1)
-    
+    const router = useRouter().asPath.substring(1)
+
+    const LinkComponent = ({href, name, extendedClass}) =>{
         const toggleNav = () =>{
             setShowNav(!showNav)
         }
     
         return <Link href={href}>
-            <a onClick={toggleNav} className={`${router === href && 'font-semibold'}`}>{name}</a>
+            <a onClick={toggleNav} className={`${router === href && 'font-semibold'} ${extendedClass}`}>{name}</a>
         </Link>
     }
+
+    useEffect(()=>{
+        if(router.match('crew')){
+            setDisable(true)
+        }
+        else {
+            setDisable(false)
+        }
+    }, [router])
     
   return (
     <div className='w-full flex items-center justify-between md:justify-center relative h-20 md:h-auto px-4 md:px-0 overflow-hidden sticky top-0 bg-white md:bg-[#FCF9F2] z-50'>
         <ul className={`navList w-full md:w-auto h-auto fixed left-0 -top-full md:top-0 bg-white md:bg-[#FCF9F2] md:relative md:inline-flex flex flex-col md:flex-row items-center md:space-x-12 mx-auto text-[#01575D] uppercase z-30 space-y-12 md:space-y-0 py-16 md:py-0 ${styles.navList}`}>
             <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
-                <LinkComponent href="/" name="home"/>
+                <LinkComponent href="/" name="home" extendedClass={router === "" && 'font-semibold'}/>
             </li>
-            <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
-                <LinkComponent href="#ourStory" name="our story"/>
+            <li>
+                <LinkComponent href={disable ? "" : "#ourStory"} name="our story" 
+                    extendedClass={`hover:font-semibold ${disable ? 'cursor-not-allowed hover:text-gray-400' : 'border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'}`}/>
             </li>
             {/* <li className='hover:font-semibold'>
                 <LinkComponent href="#gallery" name="gallery"/>
             </li> */}
             <li className='hidden md:block w-24 h-auto'>
-                <Image src={Logo} alt="sarah and Rhilaro logo"/>
+                <Link href="/">
+                    <Image src={Logo} alt="sarah and Rhilaro logo"/>
+                </Link>
             </li>
-            <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
-                <LinkComponent href="#rsvp" name="rsvp"/>
+
+            <li>
+                <LinkComponent href={disable ? "" : "#rsvp"} name="rsvp" 
+                    extendedClass={`hover:font-semibold ${disable ? 'cursor-not-allowed hover:text-gray-400' : 'border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'}`}/>
             </li>
-            <li className='hover:font-semibold border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'>
-                <LinkComponent href="#gifts" name="gifts"/>
+
+            <li>
+                <LinkComponent href={disable ? "" : "#gifts"} name="gifts" 
+                    extendedClass={`hover:font-semibold ${disable ? 'cursor-not-allowed hover:text-gray-400' : 'border-b-2 border-white md:border-[#FCF9F2] hover:border-[#01575D]'}`}/>
             </li>
         </ul>
 

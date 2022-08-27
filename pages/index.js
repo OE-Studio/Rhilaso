@@ -4,6 +4,10 @@ import Img from '../components/Image'
 import action1 from '../assets/action1.jpg'
 import action2 from '../assets/action2.jpg'
 import action3 from '../assets/action3.jpg'
+import HeroImg from '../assets/hero.jpg'
+import Image from 'next/image'
+import Logo from '../assets/Logo.png'
+
 
 
 import Link from 'next/link'
@@ -33,15 +37,29 @@ export default function Home() {
 
   return (
     <div className="relative">
+      <div>
+          <div className="relative flex items-center justify-center">
+              <Image src={Logo} width={300} height={300} className="" alt="Rhilaso and Sarah logo"/>
+          </div>
+
+          <header className="text-center mt-5 space-y-2">
+              <h4 className="text-2xl xl:text-4xl text-[#001516] font-bonvivant">A blessed union between</h4>
+              <h1 className="text-5xl lg:text-8xl text-[#01686F] font-bonvivant">Sarah &amp; Rhilaso</h1>
+          </header>
+
+          <div className="w-full lg:w-1/2 h-auto container px-4 lg:md:px-8 xl:px-10  mx-auto mt-16">
+              <Img src={HeroImg} alt="Rhilaso and Sarah holding each other"/>
+          </div>
+      </div>
       {/* Date */}
-      <div className=' py-28 bg-[#01575D] flex justify-center'>
+      <div className=' py-28 bg-[#01575D] flex justify-center mt-12'>
         <div className='inline-block text-white'>
-          <div className='flex w-auto text-4xl md:text-[100px] xl:text-[150px] md:leading-[100px] divide-x divide-dashed font-bonvivant'>
+          <div className='flex w-auto text-4xl md:text-[100px] md:leading-[100px] divide-x divide-dashed font-bonvivant'>
             <div className='pr-6 lg:pr-12'>01</div>
             <div className='px-6 lg:px-12'>Oct</div>
             <div className='pl-6 lg:pl-12'>22</div>
           </div>
-          <button className='w-full bg-[#E8B145] h-14 xl:h-20 mt-6 text-xl xl:text-3xl'>Save the date</button>
+          <button className='w-full bg-[#E8B145] h-14 xl:h-16 mt-6 text-xl xl:text-2xl cursor-default'>Save the date</button>
         </div>
       </div>
 

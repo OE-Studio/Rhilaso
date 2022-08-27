@@ -2,8 +2,7 @@ import React, {useState} from "react"
 import Image from "next/image"
 import Nav from "./Nav"
 import Logo from '../assets/Logo.png'
-import HeroImg from '../assets/hero.jpg'
-import Img from "./Image"
+
 import Head from "next/head"
 // import Footer from "./footer"
 
@@ -43,30 +42,17 @@ const Layout = ({children}) =>{
                 <meta name="description" content="Details of the wedding of Rhilso and Sarah"/>
             </Head>
             <Nav/>
-            <div>
-                <div className="relative flex items-center justify-center">
-                    <Image src={Logo} width={300} height={300} className="" alt="Rhilaso and Sarah logo"/>
-                </div>
-
-                <header className="text-center mt-5 space-y-2">
-                    <h4 className="text-2xl xl:text-4xl text-[#001516] font-bonvivant">A blessed union between</h4>
-                    <h1 className="text-5xl lg:text-8xl text-[#01686F] font-bonvivant">Sarah &amp; Rhilaso</h1>
-                </header>
-
-                <div className="w-full h-auto container px-4 lg:md:px-8 xl:px-10  mx-auto mt-16">
-                    <Img src={HeroImg} alt="Rhilaso and Sarah holding each other"/>
-                </div>
-            </div>
+            
 
             <main>
                 {children}
             </main>
 
             <section>
-                <section className="container mx-auto px-4 md:px-8 lg:px-10 py-10" id="gifts">
-                    <div className="py-8 xl:py-10 relative text-center border-b-2 border-[#569A9F]">
+                <section className="container mx-auto px-4 md:px-8 lg:px-10 pb-10" id="gifts">
+                    <div className="pb-8 relative text-center border-b-2 border-[#569A9F]">
                         <h2 className="font-bonvivant text-5xl xl:text-8xl">Gift</h2>
-                        <h3 className="font-bonvivant text-2xl xl:text-3xl">The Couples</h3>
+                        <h3 className="font-bonvivant text-2xl xl:text-3xl">The Couple</h3>
 
                         <div className="w-16 h-16 rounded-full bg-[#ECC16A] absolute -bottom-8 left-0 right-0 mx-auto"></div>
                     </div>

@@ -39,7 +39,7 @@ export default function Home() {
     <div className="relative">
       <div>
           <div className="relative flex items-center justify-center">
-              <Image src={Logo} width={300} height={300} className="" alt="Rhilaso and Sarah logo"/>
+              <Image src={Logo} width={300} height={300} className="" alt="Rhilaso and Sarah logo" priority/>
           </div>
 
           <header className="text-center mt-5 space-y-2">

@@ -61,7 +61,7 @@ const Popup = ({setShowGallery}) =>{
 
             <div className={`w-auto mx-auto my-auto border-4 border-[#FFFFFF] rounded-lg relative ${animation.navList}`}>
                 <div className={`w-auto h-auto text-[0px] ${animation.navList}`}>
-                    <Image src={images[currentIndex]}/>
+                    <Image alt="couple" src={images[currentIndex]}/>
                 </div>
                 {/* <div className="w-full h-full image-container inline-block" style={{
                     backgroundImage:`url("${images[currentIndex].src}")`,

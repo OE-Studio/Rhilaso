@@ -90,12 +90,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <a href="/crew">
+              <Link href="/crew">
                 <div onMouseOver={hoverAction} onMouseOut={removeHoverAction} className="cursor-pointer">
                   <Img src={action1} alt="Sarah and Rhilaso"/>
                   <div className='py-6 text-center text-white bg-[#2B8187] font-bonvivant'>Meet the crew</div>
                 </div>
-              </a>
+              </Link>
 
               <Link  href="#gifts">
                 <div onMouseOver={hoverAction} onMouseOut={removeHoverAction} className="cursor-pointer">

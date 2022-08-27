@@ -47,7 +47,7 @@ export default function Home() {
               <h1 className="text-5xl lg:text-8xl text-[#01686F] font-bonvivant">Sarah &amp; Rhilaso</h1>
           </header>
 
-          <div className="w-full lg:w-1/2 h-auto container px-4 lg:md:px-8 xl:px-10  mx-auto mt-16">
+          <div className="w-full h-auto container px-4 lg:md:px-8 xl:px-10  mx-auto mt-16">
               <Img src={HeroImg} alt="Rhilaso and Sarah holding each other"/>
           </div>
       </div>
@@ -90,12 +90,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <Link href="/crew">
+              <a href="/crew">
                 <div onMouseOver={hoverAction} onMouseOut={removeHoverAction} className="cursor-pointer">
                   <Img src={action1} alt="Sarah and Rhilaso"/>
                   <div className='py-6 text-center text-white bg-[#2B8187] font-bonvivant'>Meet the crew</div>
                 </div>
-              </Link>
+              </a>
 
               <Link  href="#gifts">
                 <div onMouseOver={hoverAction} onMouseOut={removeHoverAction} className="cursor-pointer">

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import styles from '../styles/Animations.module.css'
 import { useRouter } from 'next/router'
-import Logo from '../assets/Logo.png'
+import Logo2 from '../assets/Logo2.png'
 import Image from 'next/image'
 
 
@@ -66,7 +66,7 @@ const Nav = () => {
             </li> */}
             <li className='hidden md:block w-24 h-auto'>
                 <Link href="/">
-                    <Image src={Logo} alt="sarah and Rhilaro logo"/>
+                    <Image src={Logo2} alt="sarah and Rhilaro logo"/>
                 </Link>
             </li>
 
@@ -83,7 +83,7 @@ const Nav = () => {
 
         <div className='w-full h-full flex items-center justify-between md:hidden z-50 relative bg-white'>
             <div className='w-16 h-auto '>
-                <Image src={Logo} alt="sarah and Rhilaro logo"/>
+                <Image src={Logo2} alt="sarah and Rhilaro logo"/>
             </div>
 
             <div className='flex flex-col items-center justify-between gap-2 h-auto w-8  relative z-50' onClick={toggleNav}>

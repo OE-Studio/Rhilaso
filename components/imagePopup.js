@@ -1,25 +1,25 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect} from "react"
 import styles from '../styles/Popup.module.css'
 import animation from '../styles/Animations.module.css'
 import Image from "next/image"
 
-import gallery1 from '../public/gallery1-min.png'
-import gallery2 from '../public/gallery2-min.png'
-import gallery3 from '../public/gallery3-min.png'
-import gallery4 from '../public/gallery4-min.png'
-import gallery5 from '../public/gallery5-min.png'
-import gallery6 from '../public/gallery6-min.png'
-import gallery7 from '../public/gallery7-min.png'
-import gallery8 from '../public/gallery8-min.png'
-import gallery9 from '../public/gallery9-min.png'
-import gallery10 from '../public/gallery10-min.png'
-import gallery11 from '../public/gallery11-min.png'
-import gallery12 from '../public/gallery12-min.png'
+import gallery1 from '../assets/gallery1.webp'
+import gallery2 from '../assets/gallery2.webp'
+import gallery3 from '../assets/gallery3.webp'
+import gallery4 from '../assets/gallery4.webp'
+import gallery5 from '../assets/gallery5.webp'
+import gallery6 from '../assets/gallery6.webp'
+import gallery7 from '../assets/gallery7.webp'
+import gallery8 from '../assets/gallery8.webp'
+import gallery9 from '../assets/gallery9.webp'
+import gallery10 from '../assets/gallery10.webp'
+import gallery11 from '../assets/gallery11.webp'
+import gallery12 from '../assets/gallery12.webp'
 
 const images = [gallery1,gallery2,gallery3,gallery4,gallery5,gallery6,gallery7,gallery8,gallery9,gallery10,gallery11,gallery12]
 
-const Popup = ({setShowGallery}) =>{
-    const [currentIndex, setCurrentIndex] = useState(0)
+const Popup = ({currentIndex, setCurrentIndex}) =>{
+    // const [currentIndex, setCurrentIndex] = useState(0)
     
     useEffect(()=>{
         if(typeof(window) !== 'undefined') {
@@ -31,21 +31,26 @@ const Popup = ({setShowGallery}) =>{
         }
     }, [currentIndex])
 
+    useEffect(()=>{
+        console.log(currentIndex);
+    }, [currentIndex])
+
     const nextImage = ()=>{
         if(currentIndex < 11) {
-            setCurrentIndex(prev=>prev + 1)
+            setCurrentIndex(prev=>Number(prev) + 1)
         }
     }
 
     const prevImage = () =>{
         if(currentIndex > 0) {
-            setCurrentIndex(prev=>prev - 1)
+            setCurrentIndex(prev=>Number(prev) - 1)
         }
     }
 
     const closePopup = (e) =>{
         if(Array.from(e.target.classList).indexOf('popupCont') > -1) {
-            setShowGallery(false)
+            // setShowGallery(false)
+            setCurrentIndex(null)
         }
     }
     return (
@@ -59,20 +64,13 @@ const Popup = ({setShowGallery}) =>{
                 </p>
             </div>
 
-            <div className={`w-auto mx-auto my-auto border-4 border-[#FFFFFF] rounded-lg relative ${animation.navList}`}>
-                <div className={`w-auto h-auto text-[0px] ${animation.navList}`}>
-                    <Image alt="couple" src={images[currentIndex]}/>
+            <div className={`w-11/12 md:w-10/12 lg:w-2/3 xl:w-1/3 mx-auto my-auto border-4 border-[#FFFFFF] rounded-lg relative ${animation.navList}`}>
+                <div className={`w-auto h-auto text-[0px] rounded ${animation.navList}`}>
+                    <Image alt="couple" className="rounded" src={images[currentIndex]}/>
                 </div>
-                {/* <div className="w-full h-full image-container inline-block" style={{
-                    backgroundImage:`url("${images[currentIndex].src}")`,
-                    backgroundSize:'cover',
-                    backgroundPosition:"center top"
-                }}>
-
-                </div> */}
                 
 
-                <div className="absolute  -top-12 right-0 md:-right-12 bg-white rounded-full w-8 h-8 text-black flex items-center justify-center" onClick={()=>setShowGallery(false)}>
+                <div className="absolute  -top-12 right-0 md:-right-12 bg-white rounded-full w-8 h-8 text-black flex items-center justify-center" onClick={()=>setCurrentIndex(null)}>
                     <span className="flex items-center justify-center "><i className="ri-close-line"></i></span>
                 </div>
             </div>

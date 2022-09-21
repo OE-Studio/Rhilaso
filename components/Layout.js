@@ -92,9 +92,9 @@ const Layout = ({children}) =>{
 
                             <section className="w-auto">
                                 <div className="inline-block py-6 md:py-3 lg:py-6">
-                                    <p onClick={copyToClipboard} className="cursor-pointer hover:text-[#ECC16A] inline-flex font-medium">2004911294 </p>
+                                    <p onClick={copyToClipboard} className="cursor-pointer hover:text-[#ECC16A] inline-flex font-medium">0064789559 </p>
                                     <p className="inline-flex">&nbsp; - Silas Rhilaso Dokong</p>
-                                    <p>Kuda Bank</p>
+                                    <p>Access Bank</p>
                                 </div>
                             </section>
                         </section>
